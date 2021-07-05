@@ -1,3 +1,2 @@
 .\env.ps1
-.\venv\Scripts\activate.ps1
-python .\test.py
+poetry run api_google_bot

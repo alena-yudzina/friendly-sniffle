@@ -3,13 +3,25 @@ name = "test_api_google_bot"
 version = "0.1.0"
 description = ""
 authors = ["Artem <uzapolsky@gmail.com>"]
+packages = [
+  { include = "api_google_bot" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.25.1"
+google-api-python-client = "^2.10.0"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.4.4"
+telegram = "^0.0.1"
+python-telegram-bot = "^13.6"
+loguru = "^0.5.3"
 
 [tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+api_google_bot = "api_google_bot.api_google_bot:init_telegram"
